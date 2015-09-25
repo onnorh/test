@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Videa.Boilerplate.WebServices.Host.SimpleService" Factory="Videa.Boilerplate.WebServices.Host.Infrastructure.StructureMapServiceHostFactory" %>

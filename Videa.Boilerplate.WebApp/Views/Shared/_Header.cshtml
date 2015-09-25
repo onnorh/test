@@ -1,0 +1,63 @@
+﻿@using Microsoft.AspNet.Identity
+@using System.Security.Claims
+
+<div class="header-container">
+
+    @{
+        @*string text = string.Empty;
+            ClaimsIdentity claimId = (ClaimsIdentity)User.Identity;
+
+
+            var impersonationQuery = from i in claimId.Claims
+                                     where i.Type == "ImpsersonatedBy"
+                                     select i;
+
+            Claim impersonationClaim = impersonationQuery.ToList().FirstOrDefault();
+
+            var stationQuery = from i in claimId.Claims
+                               where i.Type == "Station"
+                               select i;
+
+            Claim stationClaim = stationQuery.ToList().FirstOrDefault();
+
+            // This does the same as above, just different syntax.
+            //
+            //Claim impersonationClaim = claimId.Claims.FirstOrDefault( x => x.Type == "ImpsersonatedBy" );
+
+            if (impersonationClaim != null)
+            {
+                text = "<< " + User.Identity.GetUserName() + " >>";
+
+                <div style="background-color: red; color: whitesmoke" align="center">@impersonationClaim.Value is impersonating! &nbsp;&nbsp; Sign out to end impersonation.</div>
+            }
+
+            text = User.Identity.GetUserName();*@
+
+
+    }
+
+    <div class="header">
+        <div class="base-content">
+            <a href="/">
+                <img class="header-logo" src="/Content/Images/videa.png" />
+            </a>
+            <form name="logoutform" class="form-horizontal pull-right">
+                <span style="font-size:18px;vertical-align:middle;">placeholder.user@videa.tv <i class="icon-angle-down" style="color:#F58220;margin-left:5px;"></i></span>
+                <span style="padding:0 10px;">|</span>
+                <span class="form-control-static mrxs">WELCOME </span>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle form-control-static mrxs">user@email.com!</a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="/Buyers/Campaign/Create" target="_self">Buyers</a>
+                            <a href="/Support/ProposalCreation" target="_self">Support</a>
+                            <a href="/Reps/Order" target="_self">Reps</a>
+                            <a href="/OrderManagement/OrderListing" target="_self">Order Management</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" class="btn btn-signout form-control-static" value="SIGN OUT" />
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿<div>
+    <h2>View Stations</h2>
+    <table class="seller-table order-summary-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Call Letters</th>
+                <th>Sales Name</th>
+<!--
+                <th ng-class="{'pointer':gridColumn.sortable, 'currentSort': gridColumn.isSorted, 'unsorted': !gridColumn.isSorted }">
+                    {{gridColumn.title}}
+                    <i ng-show="gridColumn.sortable" class="pointer" ng-class="gridColumn.sortedDesc ? 'icon-angle-down down' : 'icon-angle-up up'"></i>
+                </th>
+-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="station in stations">
+                <td>
+                   {{station.name}}
+                </td>
+                <td>
+                    {{station.callLetters}}
+                </td>
+                <td>
+                    {{station.salesName}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <vui-pager total-items="totalItems" items-per-page="itemsPerPage" current-page="currentPage"></vui-pager>
+    </div>
+</div>

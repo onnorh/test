@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.AreaName = "Buyers";
+}
+
+@RenderBody()
+
+@section scripts {
+    @Scripts.Render("~/Scripts/app/account/app.min.js")
+    @RenderSection("scripts", false)
+}

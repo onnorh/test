@@ -1,0 +1,108 @@
+﻿$fonts-path: '../fonts';
+$roboto-font-path: '#{$fonts-path}/roboto';
+
+@mixin declare-font-face($font-family, $font-filename, $font-weight: normal, $font-style: normal) {
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('#{$font-filename}.eot');
+        src: url('#{$font-filename}.eot?#iefix') format('embedded-opentype'), url('#{$font-filename}.woff') format('woff'), url('#{$font-filename}.ttf') format('truetype'), url('#{$font-filename}.svg##{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Regular-webfont');
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Italic-webfont', normal, italic);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Bold-webfont', bold);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-BoldItalic-webfont', bold, italic);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Thin-webfont', 100);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-ThinItalic-webfont', 100, italic);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Light-webfont', 200);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-LightItalic-webfont', 200, italic);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-Medium-webfont', 300);
+@include declare-font-face('Roboto', '#{$roboto-font-path}/Roboto-MediumItalic-webfont', 300, italic);
+
+@include declare-font-face('Roboto Condensed', '#{$fonts-path}/roboto_condensed/RobotoCondensed-Regular-webfont');
+
+@include declare-font-face('icomoon', '#{$fonts-path}/icomoon/icomoon');
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-th:before {
+    content: "\f00a";
+}
+
+.icon-bars:before {
+    content: "\f0c9";
+}
+
+.icon-envelope:before {
+    content: "\e601";
+}
+
+.icon-angle-left:before {
+    content: "\f104";
+}
+
+.icon-angle-right:before {
+    content: "\f105";
+}
+
+.icon-angle-up:before {
+    content: "\f106";
+}
+
+.icon-angle-down:before {
+    content: "\f107";
+}
+
+.icon-media-record:before {
+    content: "\e600";
+}
+
+.icon-pie:before {
+    content: "\e602";
+}
+
+.icon-trophy:before {
+    content: "\f091";
+}
+
+.icon-square:before {
+    content: "\f0c8";
+}
+
+.icon-check-square:before {
+    content: "\f14a";
+}
+
+.icon-times-circle:before {
+    content: "\f057";
+}
+
+.icon-circle-thin:before {
+    content: "\f1db";
+}
+
+.icon-calendar:before {
+    content: "\f073";
+}
+
+.icon-triangle-up:before {
+    content: "\f0aa";
+}
+
+.icon-copy:before {
+    content: "\e92c";
+}

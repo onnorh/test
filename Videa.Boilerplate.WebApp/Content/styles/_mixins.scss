@@ -1,0 +1,52 @@
+﻿@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -ms-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin content-indent($normalIndent) {
+    padding-left: $normalIndent;
+    padding-right: $normalIndent;
+
+    @media (min-width: 1024px) {
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
+
+%primarybtn {
+    background-color: $action-color;
+    border-color: $action-color;
+    color: #ffffff;
+    text-transform: uppercase;
+    outline: none;
+}
+
+%textbox {
+    border: solid 1px $action-color;
+    @include border-radius(0);
+    @include box-shadow(none);
+    outline: none;
+}
+
+%heading {
+    font-size: 35px;
+    font-weight: 200;
+    color: $videa-font-color;
+    text-transform: uppercase;
+}

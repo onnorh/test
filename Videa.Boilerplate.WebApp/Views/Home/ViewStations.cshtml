@@ -1,0 +1,38 @@
+﻿@model ICollection<Videa.Boilerplate.Core.Entities.Station>
+@using Videa.Web.Framework.Helpers
+@using Videa.Web.Framework.MvcHelpers
+
+@section areaMenuItems{
+    <div class="clearfix top-nav seller-top-nav top-menu">
+        <div class="top-menu">
+            <ul class="horizontal-list">
+                @Html.MenuItem("Advance Insights", "Index", "CorpDashboard")
+                @Html.MenuItem("Rate Card", "Index", "StationRateCard")
+                <li id="performanceMenuItem">
+                    <div class="dropdown" active-dropdown-menu>
+                        <a class="mrxs form-control-static dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+                            Performance<i class="icon-angle-down"></i>
+                        </a>
+                        <ul class="navigation-dropdown dropdown-menu" role="menu">
+                            @Html.MenuItem("Account Performance", "Index", "AccountPerformance")
+                            @Html.MenuItem("Station Performance", "Index", "StationPerformance")
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="pull-right">
+                <div id="btnPreferences" class="btn btn-primary" onclick="document.location.href = '/Sellers/Preferences'" style="width: 49px;">
+                    <i class="glyphicon glyphicon-cog" style="font-size: 21px; padding-top: 5px; margin-left: 0;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="seller-content">
+    <div ng-view></div>
+</div>
+
+<script type="text/javascript">
+    PreloadStore.store('stations', @Html.Json(@Model));
+</script>

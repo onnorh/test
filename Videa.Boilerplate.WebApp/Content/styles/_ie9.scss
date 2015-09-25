@@ -1,0 +1,8 @@
+﻿/* Add IE9 class overrides here. Use ONLY when no other CSS approach can be used. */
+
+.ie9 {
+    .ng-modal-dialog {
+        top: calc(50% - 250px);
+        left: calc(50% - 250px);
+    }
+}

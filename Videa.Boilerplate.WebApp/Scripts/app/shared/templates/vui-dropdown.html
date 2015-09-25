@@ -1,0 +1,18 @@
+﻿<div class="videa-dropdown" ng-style="{ 'width' : styleBaseWidth}">
+    <div class="dropdown" is-open="isOpen" ng-style="{ 'width' : styleInnerWidth}">
+        <a class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <div ng-style="{ 'width' : styleDisplayDivWidth}">
+                <span>{{config.selectedItem !== null ? config.selectedItem[config.dataItemName] : config.displayName}}</span>
+                <i class="icon-angle-down" ng-style="{ 'margin-left' : styleDownIconLeftMargin}"></i>
+            </div>
+        </a>
+        <ul class="dropdown-menu" role="menu" ng-style="{'height' : styleDropDownHeight, 'width' : styleDropDownWidth}">
+            <li data-ng-click="itemSelected(item)" data-ng-repeat="item in config.dataSource | orderBy: config.orderBy">
+                <a>
+                    <i class="icon-triangle-up" ng-style="{ 'left' : styleTriangleUpLeft}"></i>
+                    {{item[config.dataItemName]}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

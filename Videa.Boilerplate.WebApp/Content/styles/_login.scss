@@ -1,0 +1,191 @@
+﻿.login-form {
+    @media (min-width: 1024px) {
+        .login-input {
+            width: 252px;
+        }
+
+        .login-actions {
+            width: 316px;
+        }
+    }
+
+    width: 990px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: $videa-color;
+    @include content-indent(15px);
+
+    input {
+        &.form-control {
+            border: none;
+            @include border-radius(0);
+            -webkit-transform: none;
+            -moz-transform: none;
+            -ms-transform: none;
+            -o-transform: none;
+            transform: none;
+            height: 39px;
+            @include box-shadow(none);
+        }
+    }
+
+    label {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .login-input {
+        padding-left: 5px;
+        padding-left: 10px;
+    }
+
+    .btn-submit:active,
+    .btn-submit {
+        @include border-radius(3px);
+        background-color: #FF8500;
+        border: none;
+        height: 39px;
+        width: 100%;
+    }
+
+    .input-group-addon {
+        border: 0;
+        @include border-radius(0);
+        background-repeat: no-repeat;
+        width: 64px;
+
+        &.username {
+            background-image: url("../Images/username-input-group.jpg");
+        }
+
+        &.password {
+            background-image: url("../Images/password-input-group.jpg");
+        }
+    }
+
+    .btn-submit {
+        &:focus, &:active:focus, &.active:focus {
+            outline: none;
+        }
+    }
+
+    a {
+        &:link, &:hover, &:visited {
+            color: #ffffff;
+        }
+    }
+
+    .login-actions {
+        margin-top: 5px;
+
+        label {
+            font-size: 14px;
+        }
+        /* override from _base.scss */
+        .vui-checkbox-unchecked,
+        .vui-checkbox-checked {
+            border: none;
+        }
+    }
+}
+
+.row {
+    @media (min-width: 1024px) {
+        .btn-submit-row {
+            padding-left: 0;
+        }
+    }
+}
+
+
+.splash {
+    margin-top: -20px;
+    height: 612px;
+    background-image: url("../Images/login_background_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center -574px;
+
+    .splash-title {
+        padding: 42px 68px;
+        font-weight: 200;
+        font-size: 32px;
+    }
+}
+
+.validation-summary-errors {
+    &.login {
+        @include content-indent(15px);
+        background-color: #C5203E;
+        height: 39px;
+        color: #ffffff;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 0;
+            margin-left: 5px;
+            padding: 0;
+            display: inline-block;
+            vertical-align: middle;
+
+            li {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.seller-content.update-password {
+    max-width: 1020px;
+
+    .validation-box {
+        background-color: #C5103D;
+        width: 232px;
+        height: 26px;
+
+        i {
+            color: white;
+            margin-left: 10px;
+            top: 4px;
+        }
+
+        span {
+            color: white;
+            margin-left: 6px;
+            top: 2px;
+            position: relative;
+        }
+    }
+
+
+    .form-control {
+        width: 232px;
+        height: 45px;
+    }
+
+    .btn-update {
+        height: 49px;
+        width: 96px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sub-text {
+        font-size: 17px;
+        font-weight: 400;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+
+    .normal {
+        font-weight: normal;
+    }
+}

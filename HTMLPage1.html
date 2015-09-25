@@ -1,0 +1,415 @@
+﻿
+
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie9">
+<![endif]-->
+<!--[if !(IE 9)]>-->
+<html>
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="XSRFToken" content="x3Hnqwks4qtWK80W2qUL9XUqZsY-yX2G4-xXT0cVhBArkU4EQC0WzT65R-5D7-DEquGBdY9gySxz4N3432_d7xo-IxkSx1Wy5tZtDbrAwyRqTxGNIZoZc8GsmCIGEF3el5-o9Q2">
+    <meta name="generator" content="Videa-0.1.631.10714">
+    <title>Corp Dashboard - videa.tv</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Favicon code -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/Content/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/Content/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/Content/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/Content/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/Content/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/Content/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/Content/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/Content/favicons/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="/Content/favicons/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="/Content/favicons/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/Content/favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/Content/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/Content/favicons/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <link href="/Content/styles/site.min.css?v=MkCfCaElF6fXPqy9w_dRXLav7JhgzzDLdeuY0mz-awA1" rel="stylesheet" />
+
+    <script src="/Scripts/libraries.min.js?v=5SccCG1kplOLUGsZM8yRwcus4Dw9WNyDn_-s0Qrp61U1"></script>
+
+    <script src="/Scripts/angular.all.min.js?v=k4g7rzoILXStxx-5OJ5KX3qLHJZrwmbBQiXLV7hTMn01"></script>
+
+
+    <script src="/Scripts/app/shared/app.min.js?v=iNr62jRK8h5DgijJ24q-jPluc_ptBHqIkdJGV8KmSmM1"></script>
+
+    <script src="/Scripts/app/account/app.min.js?v=Wfvje_k3nLulczzPhbgVbCfP-Kvd0Rmiu8w4oQPm1-81"></script>
+
+
+
+    <script type="text/javascript">
+        window.videaShared.enablePasswordPolicy = true;
+        window.appInsights = {
+            queue: [], applicationInsightsId: null, accountId: null, appUserId: null, configUrl: null,
+            start: function(n) {
+                function u(n) {
+                    t[n] = function() {
+                        var i = arguments;
+                        t.queue.push(function() { t[n].apply(t, i) })
+                    }
+                }
+
+                function f(n, t) {
+                    if (n) {
+                        var u = r.createElement(i);
+                        u.type = "text/javascript";
+                        u.src = n;
+                        u.async = !0;
+                        u.onload = t;
+                        u.onerror = t;
+                        r.getElementsByTagName(i)[0].parentNode.appendChild(u)
+                    } else t()
+                }
+
+                var r = document, t = this, i;
+                t.applicationInsightsId = n;
+                u("logEvent");
+                u("logPageView");
+                i = "script";
+                f(t.configUrl, function() { f("//az416426.vo.msecnd.net/scripts/ai.0.js") });
+                t.start = function() {}
+            }
+        };
+
+        appInsights.start("15610878-86f2-4634-bbe5-4bea081ee3b4");
+        appInsights.logPageView();
+    </script>
+
+</head>
+
+<body ng-app="videaApp">
+    <div class="container">
+
+        <div class="header-container">
+            <div class="header">
+                <div class="base-content">
+                    <a href="/">
+                        <img class="header-logo" src="/Content/Images/videa.png" />
+                    </a>
+                    <form action="/Account/LogOff" class="form-horizontal pull-right" method="post" name="logoutform">
+                        <span class="form-control-static mrxs">WELCOME BACK, </span>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle form-control-static mrxs">demo@videa.tv!</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                    <a href="/Sellers/Home" target="_self">Seller Dashboard</a>                                
+                                    <a href="/Admin/Users/Index" target="_self">Admin</a>                                                                    
+                                    <a href="/rm/PriceOpt/Demand" target="_self">RM</a>
+                                    <a href="/Buyers/Campaign/Create" target="_self">Buyers</a>
+                                    <a href="http://support.videa.int" target="_self">Support</a>
+                                    <a href="/Reps/Order" target="_self">Reps</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <input type="submit" class="btn btn-signout form-control-static" value="SIGN OUT" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="clearfix top-nav seller-top-nav top-menu">
+            <div class="top-menu">
+                <ul class="horizontal-list">
+                    <li class="active"><a href="/Sellers/CorpDashboard">Advance Insights</a></li>
+                    <li><a href="/Sellers/StationRateCard">Rate Card</a></li>
+                    <li><a href="/Sellers/Home">Order</a></li>
+                    <li><a href="/Sellers/MakeGoods">Make Goods</a></li>
+                    <li><a href="/Sellers/Otri">Otri</a></li>
+                    <li><a href="/Sellers/Pricing">Pricing</a></li>
+                    <li id="performanceMenuItem">
+                        <div class="dropdown" active-dropdown-menu>
+                            <a class="mrxs form-control-static dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false">
+                                Performance<i class="icon-angle-down"></i>
+                            </a>
+                            <ul class="navigation-dropdown dropdown-menu" role="menu">
+                                <li><a href="/Sellers/AccountPerformance">Account Performance</a></li>
+                                <li><a href="/Sellers/StationPerformance">Station Performance</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li><a href="/Sellers/PostOrder">Post Order</a></li>
+                    <li><a href="/Sellers/PreEmpt">Pre-Empt</a></li>
+                </ul>
+                <div class="pull-right">
+                    <div id="btnPreferences" class="btn btn-primary" onclick="document.location.href='/Sellers/Preferences'" style="width:49px;"><i class="glyphicon glyphicon-cog" style="font-size: 21px; padding-top: 5px; margin-left:0;"></i></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="seller-content corp-dashboard" style="max-width: 1316px;">
+
+            <style>
+                .corpDashFilterNoBorder {
+                    border: none !important;
+                }
+            </style>
+
+            <div ng-controller="CorpDashFilterController" class="sellers-filter corp-dash-filter" ng-cloak>
+                <div class="filter-image"></div>
+                <div class="filter-title"> FILTER </div>
+
+                <div class="performance-filter-controls station-performance-controls">
+                    <div class="filter-station-dropdown">
+                        <div class="orderViewFilterBox">
+                            <div class="dropdown">
+                                <a class="dropdown-toggle">
+                                    <div>
+                                        <span>{{stationsFilterLabel}}</span><i class="icon-angle-down"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-timeframe" role="menu">
+                                    <i class="icon-triangle-up"></i>
+                                    <li>
+                                        <div class="dropdown-toggle" style="height: 24px;">
+                                            <i class="icon-times-circle"></i>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <ul>
+                                            <li ng-repeat="item in stationsFilterItems">
+                                                <vui-checkbox text="{{item.value}}" value="item.checked" style="padding: 2px 0;margin-left: 10px;"></vui-checkbox>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div style="height: 10px;"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewDivider"></div>
+                    <div class="timeframe-container">
+                        <div class="orderViewFilterBox" ng-class="{'corpDashFilterNoBorder':hideTimeframe}">
+                            <div class="dropdown" is-open="timeFrameFilterOpen" ng-hide="hideTimeframe">
+                                <a class="dropdown-toggle">
+                                    <div>
+                                        <span>{{timeFrameFilterLabel}}</span><i class="icon-angle-down"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-timeframe" role="menu">
+                                    <i class="icon-triangle-up"></i>
+                                    <li ng-repeat="item in timeFrameFilterItems"><a ng-click="timeFrameViewSelect(item)">{{item.value}}</a></li>
+                                </ul>
+                            </div>
+                            <div ng-show="hideTimeframe" style="width: 129px;"></div>
+                        </div>
+                    </div>
+                    <div class="viewDivider"></div>
+
+                    <div class="checkboxGroup vui-checkbox-group">
+                        <div ng-hide="hideCheckboxes">
+                            <vui-checkbox text="Local" value="filter.localChecked" cb-disabled="!checkboxState.localEnabled"></vui-checkbox>
+                            <vui-checkbox text="National" value="filter.nationalChecked" cb-disabled="!checkboxState.nationalEnabled"></vui-checkbox>
+                            <vui-checkbox text="Videa" value="filter.videaChecked" cb-disabled="!checkboxState.videaEnabled"></vui-checkbox>
+                            <vui-checkbox text="Political" value="filter.politicalChecked" cb-disabled="!checkboxState.politicalEnabled"></vui-checkbox>
+                        </div>
+                        <div style="width: 352px;" ng-show="hideCheckboxes"></div>
+                    </div>
+
+
+                    <div class="viewDivider"></div>
+                    <div class="measurement-container">
+                        <div class="orderViewFilterBox">
+                            <div class="dropdown" is-open="measurementFilterOpen">
+                                <a class="dropdown-toggle">
+                                    <div>
+                                        <span ng-class="{'starAfter': measurementFilterLabel == 'CPP' || measurementFilterLabel == 'CPM'}">{{measurementFilterLabel}}</span><i class="icon-angle-down"></i>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-timeframe" role="menu">
+                                    <i class="icon-triangle-up"></i>
+                                    <li ng-repeat="item in measurementFilterItems"><a ng-click="measurementViewSelect(item)" ng-class="{'starAfter': item.value == 'CPP' || item.value == 'CPM'}">{{item.value}}</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <vui-checkbox text="Include $0 Spots" value="filter.zeroDollarSpotsChecked" style="margin-left: 20px;"></vui-checkbox>
+
+                    <input type="button" class="btn btn-primary pref-button" value="REFRESH" ng-click="refresh()">
+                    <div class="clearfix"></div>
+                </div>
+                <div class="error-panel" ng-show="reqStationError||reqRegionError">
+                    <div ng-show="reqStationError" style="float: left;">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                        <span>
+                            Please select a station.
+                        </span>
+                    </div>
+                    <div ng-show="reqRegionError">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                        <span>
+                            Please select a sales region.
+                        </span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <hr />
+
+
+            <div ng-controller="CorpDashChartsController">
+                <h2>Advance Insights</h2>
+                <corp-dash-chart chart-data="chartData"></corp-dash-chart>
+            </div>
+
+
+
+            <br />
+
+
+            <div class="seller-content-offset" default-route="/CorpDashStation">
+                <div class="corp-tab-container" ng-controller="CorpDashTabsController">
+                    <div>
+                        <div class="corp-tab-holder">
+                            <div ng-click="changeTab('stations')" ng-class="{corpDashTabSelected: 'stations'==selectedTab}">STATIONS</div>
+                        </div>
+                        <div class="corp-tab-holder">
+                            <div class="corp-dash-tab-middle" ng-click="changeTab('pricing')" ng-class="{corpDashTabSelected: 'pricing'==selectedTab}">PRICING</div>
+                        </div>
+                        <div class="corp-tab-holder">
+                            <div ng-click="changeTab('agency')" ng-class="{corpDashTabSelected: 'agency'==selectedTab}">AGENCY</div>
+                        </div>
+                    </div>
+                    <div ng-view class="corp-tab-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-cloak ng-controller="LoadingController">
+            <modal-dialog id="loadingWidget" show='modalShown' width='45px' height='45px'>
+                <img src="/Content/Images/spinner.gif" alt="Loading..." />
+            </modal-dialog>
+        </div>
+
+
+
+        <!-- Pulls authentication timeout and warning values from the config file's app settings -->
+        <div ng-cloak ng-controller="AuthenticationManagerController" ng-init='init({authTimeout: 30, authWarning: 5})'>
+            <modal-dialog show='modalShown()' width='400px' height='300px'>
+                <div class="modal-title"> <h2> Timeout Warning </h2> </div>
+                <div class="modal-table">
+                    <p>Your authentication will is about to expire. Do you want to extend the session?</p>
+                </div>
+                <div>
+                    <input ng-click="refreshTimeout()" type="button" class="btn btn-primary" value="Stay" />
+                    <input ng-click="signOut()" type="button" class="btn btn-primary" value="Sign Out" />
+                </div>
+            </modal-dialog>
+        </div>
+
+    </div>
+    <div class="footer ">
+        <div class="bottom-links-wrap text-center">
+            <ul class="bottom-links">
+                <li>
+                    <a href="/BspPrivacyPolicy">Privacy Policy</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="/BspTermsAndConditions">Terms & Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            3390 Peachtree Road NE, Suite 700 Atlanta, GA 30326
+            <div class="text-center">
+            </div>
+        </div>
+        <div class="text-center">
+            Copyright &copy;
+            <script type="text/javascript">
+                var dt = new Date();
+                document.write(dt.getFullYear());
+            </script>
+            Videa. All rights reserved.
+        </div>
+        <div class="debug-panel">
+            0.1.631.10714 <br />
+        </div>
+    </div>
+
+    <script src="/Scripts/bootstrap.min.js?v=Sf1WcJ2j_Azw-wnT_wxhd5a54Y3Z66TBh-Sik8qhEAw1"></script>
+
+
+
+    <script src="/Scripts/app/sellers/app.min.js?v=TezAQg7tuUU3BEyx_Y2RE9McpVCt1qLUMTiC9PsDR-I1"></script>
+
+
+
+
+
+
+    <!-- Videa's StarPound bug fix for IE.-->
+    <script type="text/javascript">
+    if (!window.console) {
+        window.console = {
+            log: function () {}
+        };
+    }
+    </script>
+
+    <!--Start of Starpound Live Chat Script-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript">try { var tQuery = jQuery.noConflict(true); } catch (e) { var __callcenterchatui_no_compat__ = true; };</script>
+    <script type="text/javascript" src="https://videa.starpoundtech.net/wim/contact/Sexy.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://videa.starpoundtech.net/wim/contact/SIPml-api.js" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+    try {
+        if (__callcenterchatui_no_compat__) { console.log('__callcenterchatui_no_compat__'); throw ''; };
+        (function ($) {
+            $.getScript('https://' + 'videa.starpoundtech.net' + '/wim/contact/callcenterchatui.js', function () {
+                return $('<div id="cccui-container"></div>').prependTo('body').callcenterchatui({
+                    base_url: 'https://' + 'videa.starpoundtech.net',
+                    language: 'english',
+                    apikey: 'AFD443CDBA1F764047EF18917928FAE6',
+                    appname: 'cservice.cc.main',
+                    queueid: '',
+                    screen_share_websocket_url: 'wss://' + 'videa.starpoundtech.net' + ':443/websocket',
+                    parameters: {
+                        'company': 'WISN',
+                        'userfullname': 'demo demo',
+                        'useremail': 'demo@videa.tv',
+                        'userphone': '555',
+                        'cs_phone': '844-213-8543',
+                        'departments': ['sales', 'marketing', 'widgets']
+                    },
+                    css: '/Content/styles/videa_contact_us_js_styles.css',
+                    external_content_url: '/contact_us_search.html'
+                }).init();
+            });
+        }(tQuery));
+    } catch (e) { }
+    var $ = tQuery.noConflict();
+    </script>
+    <!--End of Starpound Live Chat Script-->
+    <!-- Pulls JavaScript error log limit per page value from the config file's app settings -->
+    <script type="text/javascript">
+    videa.stacktrace.init({
+        jsMaxErrorsToLog: 5
+    });
+    </script>
+
+
+</body>
+
+</html>

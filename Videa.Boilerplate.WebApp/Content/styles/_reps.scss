@@ -1,0 +1,595 @@
+﻿.ng-modal-dialog-reps {
+    @extend .ng-modal-dialog;
+    width: 600px;
+
+    textarea {
+        height: 100px;
+        width: 100%;
+    }
+
+    .share-override {
+        height: 250px;
+        overflow-y: scroll;
+        padding-right: 10px;
+
+        .comment {
+            margin-bottom: 5px;
+            border: solid 1px #fff;
+            border-bottom-width: 1px;
+            border-bottom-color: #ccc;
+        }
+    }
+}
+
+a {
+    &.underline,
+    &.underline:active {
+        text-decoration: underline;
+    }
+}
+
+
+.reps-order-summary-container {
+    @extend .seller-container;
+    width: 1024px;
+
+    .cpe-filter {
+        width: 381px;
+        margin-bottom: 3px;
+
+        div {
+            float: right;
+        }
+
+        input {
+            padding: 3px;
+        }
+    }
+}
+
+.account-performance-reps {
+    @extend .account-performance;
+
+    tfoot tr td {
+        &:nth-child(7) {
+            border-left-width: 0;
+        }
+
+        padding-left: 24px;
+        padding-right: 6px;
+    }
+}
+
+.account-performance-body-reps {
+    @extend .account-performance-body;
+
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+    }
+
+    td:nth-child(6) {
+        border-right-width: 0;
+    }
+
+    td:nth-child(8) {
+        border-right: 1px solid #e0e4e5;
+    }
+}
+
+.reps-makegoods-summary-table {
+    td:nth-child(2),
+    td:nth-child(3),
+    td:nth-child(4),
+    td:nth-child(5),
+    td:nth-child(6),
+    td:nth-child(7),
+    td:nth-child(8) {
+        text-align: right;
+    }
+    /* td:nth-child(5)::before,
+    td:nth-child(3)::before,
+    td:nth-child(4)::before {
+        display: block;
+        float: left;
+        padding-right: 2px;
+        content: "$ ";
+    }*/
+}
+
+.reps-makegoods-detail {
+    width: 100%;
+    font-size: 12px;
+    table-layout: fixed;
+
+    td {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .table-head {
+        //padding: .5em 1.5em 0;
+        margin-top: -2px;
+        background-color: $table-nested-header-color;
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+            font-size: 13px;
+
+            th {
+                border-left: none;
+                border-right: none;
+                height: 41px;
+                font-weight: bold;
+                color: $table-header-color;
+                border-bottom: none;
+                padding: 0 6px;
+            }
+        }
+    }
+
+    .table-detail {
+        margin-bottom: 7px;
+        border: solid 1px $table-border-color;
+
+        table {
+            width: 100%;
+            table-layout: fixed;
+
+            td {
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: none;
+                height: 41px;
+                padding: 0 6px;
+            }
+
+            tr:first-child, tr.preempts {
+                background-color: rgba(224,228,229,0.5); //#E0E4E5;
+                border-bottom: solid 1px $table-border-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .ribbon {
+        padding-left: 1em;
+        padding-right: 4em;
+        background-color: $table-nested-header-color;
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+
+        .revenue-by {
+            padding-top: 2.8em;
+        }
+
+        table {
+            float: left;
+
+            td {
+                border: none;
+                background-color: $table-nested-header-color;
+                display: inline-block;
+                width: 183px;
+                vertical-align: top;
+                height: 24px;
+                padding: 0 6px;
+            }
+
+            span {
+                font-weight: bold;
+            }
+
+            tbody, tr:hover, tbody, tr:hover {
+                cursor: default;
+            }
+
+            thead th {
+                font-weight: normal;
+                font-size: 18px;
+                height: 41px;
+                padding: 0 6px;
+            }
+        }
+
+        div {
+            width: 314px;
+            display: inline-block;
+            float: right;
+
+            ul {
+                list-style: none;
+                padding-left: 0;
+                margin-right: 1em;
+                float: left;
+                margin: 0 0 5px;
+                width: 104px;
+
+                span {
+                    font-weight: bold;
+                    color: #F58220;
+                }
+            }
+
+            li {
+                display: inline;
+                margin-right: .5em;
+            }
+        }
+    }
+}
+
+.filterControls {
+    /*Trying BEM notation as per Victor to reduce specificity*/
+    &__weekLabel {
+        float: left;
+        line-height: 38px;
+        padding-top: 10px;
+    }
+
+    &__datePicker {
+        padding-top: 10px;
+    }
+}
+
+.filterStationMonth {
+    &__divider {
+        border-right: 1px solid #52545D;
+        width: 40px;
+        height: 29px;
+        float: left;
+    }
+}
+
+.reps-filter {
+    border: solid 1px #E0E4E5;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    div.checkboxGroup {
+        float: left;
+        margin-left: 1em;
+        padding: .4em .3em .5em .3em;
+
+        input[type='radio'] {
+            opacity: 0;
+            width: 18px;
+
+            & + label {
+                margin: 0 20px 0 0;
+                clear: none;
+                font-weight: normal;
+                padding: 5px 0 4px 24px;
+                cursor: pointer;
+                background: url('../Images/radio.png') left center no-repeat;
+            }
+
+            &:checked + label {
+                background-image: url('../Images/radio-checked.png');
+            }
+        }
+
+        label.checkboxItem {
+            margin-left: 1em;
+            color: #fff;
+            font-size: 20px;
+            position: absolute;
+            z-index: 3;
+        }
+
+        label.checkboxLabel {
+            margin-left: 3.4em;
+        }
+
+        .checkboxBackground {
+            position: absolute;
+            background-color: purple;
+            width: 1em;
+            height: 1em;
+            margin-left: 1.55em;
+            margin-top: .2em;
+            border-radius: 2px;
+            z-index: 1;
+        }
+    }
+
+    .filter-image {
+        background: url('../Images/filter-group.png');
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 38px;
+        width: 68px;
+    }
+
+    .filter-title {
+        padding-left: 64px;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $sellers-headers-color;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    .filter-controls {
+        background-color: #E0E4E5;
+        overflow: visible;
+        padding: 11px 20px;
+
+        .k-widget {
+            width: 129px;
+            border: 1px solid #682566;
+        }
+
+        .k-dropdown-wrap, .k-select {
+            background-color: #fff;
+        }
+
+        .k-select {
+            border-left: none;
+        }
+
+        .filter-station-month {
+            float: left;
+            padding-top: 5px;
+
+            .filter-station {
+                float: left;
+                padding-right: 5px;
+            }
+
+            .filter-month {
+                float: left;
+                width: 129px;
+            }
+        }
+
+        .filter-or {
+            p {
+                margin: 0;
+                padding-top: 9px;
+                text-align: center;
+            }
+
+            float: left;
+            display: table-cell;
+            width: 51px;
+        }
+
+        .filter-campaign-end-dates {
+            p {
+                text-align: center;
+                padding-top: 8px;
+                padding-right: 20px;
+            }
+
+            float: left;
+            display: table-cell;
+        }
+
+        .filter-calendar-button-refresh {
+            float: left;
+            border-radius: 4px;
+            background-color: $action-color;
+            color: #ffffff;
+            border: none;
+            height: 49px;
+            width: 100px;
+            margin: 5px 50px 0 40px;
+            cursor: pointer;
+
+            p {
+                margin-top: 4px;
+                text-align: center;
+                color: #fff;
+                font-weight: 300;
+            }
+        }
+
+        .filter-date-range {
+            float: left;
+            height: 38px;
+            margin: 0 0 0 28px;
+            //background-color: #838383;
+            .on-valid {
+                border: solid 1px $sellers-button-color;
+            }
+
+            .on-invalid {
+                border: solid 1px $videa-error;
+            }
+
+            .filter-calendar {
+                float: left;
+                background-color: #fff;
+                width: 133px;
+                height: 28px;
+                margin: 5px 0 0 5px;
+                position: relative;
+            }
+
+            .filter-calendar-textbox {
+                width: 103px;
+                height: 26px;
+                float: left;
+                border: none;
+            }
+
+            .filter-calendar-button {
+                float: right;
+                border: none;
+                overflow: hidden;
+                height: 24px;
+                padding: 5px 6px;
+            }
+
+
+
+            i {
+                color: $content-color;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .filter-container {
+        padding-top: 4px;
+
+        .filter-search {
+            border: solid 1px $action-color;
+            float: left;
+            margin: .5em 0 1.5em .15em;
+
+            .searchText {
+                float: left;
+                margin: .15em;
+                height: 3em;
+                width: 17.5em;
+                border: none;
+                padding: .5em;
+            }
+
+            .dropdown {
+                background: #fff;
+                width: 129px;
+
+                .dropdown-toggle {
+                    text-decoration: none;
+
+                    .dropdown-toggle-station-month {
+                        width: 129px;
+                        height: 27px;
+
+                        span {
+                            border-left: none;
+                            padding-right: 0;
+                            padding-left: 8px;
+                            margin-top: 0;
+                        }
+
+                        i.icon-angle-down {
+                            margin: 5px;
+                        }
+                    }
+
+                    .dropdown-toggle-rep-market {
+                        @extend .dropdown-toggle-station-month;
+                        font-size: 14px;
+
+                        span {
+                            width: 105px;
+                            font-size: 14px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            .dropdown-menu {
+                @extend %dropdown-menu;
+            }
+
+            .dropdown-menu-advertiser-campaign {
+                top: 130%;
+
+                i.icon-triangle-up {
+                    left: 86px;
+                }
+            }
+
+            div {
+                float: left;
+                width: 112px;
+
+                ul {
+                    cursor: pointer;
+                }
+
+                a {
+                    div {
+                        height: 3.2em;
+                        width: 8em;
+                        cursor: pointer;
+
+                        span {
+                            border-left: solid 1px #D1D1D1;
+                            font-size: 13px;
+                            color: $videa-font-color;
+                            padding: .2em 1em;
+                            height: 2em;
+                            display: inline-block;
+                            margin-top: .7em;
+                        }
+
+                        i {
+                            font-size: 18px;
+                            margin: .6em .6em 0 0;
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        .filter-select-station {
+            margin: 0;
+            padding-right: 0px !important;
+        }
+
+        .filter-select-month {
+            padding-right: 0px !important;
+            margin: 0 0 0 50px;
+        }
+
+        input.btn {
+            margin: .5em;
+            background-color: $action-color;
+            border-color: $action-color;
+            padding: 0 1.5em;
+            border-radius: 4px;
+            height: 49px;
+            width: 100px;
+        }
+
+        .viewFilter {
+            float: right;
+
+            span {
+                float: left;
+                padding: .7em;
+                margin-top: .7em;
+            }
+
+            
+        }
+    }
+}
+
+.reps-order-summary-filter-search {
+    div {
+        a {
+            text-decoration: none;
+            padding: 0 0 0 10px !important;
+            line-height: 30px;
+
+            div {
+                span {
+                    padding-left: 10px !important;
+                    margin-top: 6px !important;
+                    height: 32px !important;
+                }
+
+                i {
+                    margin-top: 14px !important;
+                }
+            }
+        }
+    }
+}

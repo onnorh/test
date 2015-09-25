@@ -1,0 +1,57 @@
+﻿@media print {
+    body {
+        font-family: $videa-font-family;
+        font-size: 14px;
+        color: #333;
+        background-color: #fff;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .top-nav {
+        display: none;
+    }
+
+    a, a:after {
+        content: normal !important;
+    }
+
+    .debug-panel {
+        display: none;
+    }
+
+    table.seller-table,
+    table {
+        table-layout: auto;
+
+        thead {
+            th {
+                i {
+                    display: none;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                text-overflow: initial;
+                overflow: initial;
+                white-space: normal;
+            }
+        }
+    }
+
+    .footer {
+        display: none;
+    }
+
+    form[name="logoutform"] {
+        display: none;
+    }
+
+    #cccui-container {
+        display: none;
+    }
+}

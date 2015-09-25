@@ -1,0 +1,632 @@
+@import "variables";
+
+//ogaponenko 07/09/15
+//TODO: refactor shared errorList directive
+//to use shared class instead of a buyer class
+//remove redundant buyer class out of other .css files
+.buyer-field-validation {
+    background-color: $videa-error;
+    color: #ffffff;
+    font-size: 13px;
+    clear: both;
+    overflow: auto;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-top: -10px;
+        margin-left: -20px;
+
+        li {
+            margin-left: -15px;
+        }
+    }
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, btn-primary:focus {
+    background-color: $action-color;
+    color: white;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, btn-secondary:focus {
+    background-color: $videa-orange;
+    color: white;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    height: 40px;
+}
+
+.proposal-creation-page {
+    margin-top: 30px;
+    margin-left: 90px;
+}
+
+.support-content-full,
+.support-content {
+    margin-left: 75px;
+    margin-top: 30px;
+    margin-bottom: 96px;
+    max-width: $container-width;
+    padding-left: 0;
+
+    .support-content-offset {
+        margin-bottom: 96px;
+    }
+
+    .support-content-offset-filter {
+        margin-bottom: 50px;
+        max-width: $container-width;
+    }
+
+    .filter-station-group {
+        margin-top: 3px;
+        margin-bottom: 3px;
+
+        &.address-drop {
+            margin-right: 13px;
+        }
+    }
+
+    .station-profile-fields {
+        div {
+            &.row {
+                margin-top: 15px;
+
+                &.mtl {
+                    margin-top: 20px;
+                }
+            }
+
+            &.support-dropdown {
+                border: solid 1px $action-color;
+                border-radius: 0px;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            &.btn-grp {
+                margin-top: 17px;
+
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+.support-expand-collapse-icon {
+    color: #682566;
+    margin-right: .4em;
+    font-size: 16px;
+    top: 0.2em;
+    margin-left: 15px;
+}
+
+.support-table {
+    border-spacing: 2px;
+    border-collapse: separate;
+    width: 100%;
+    font-size: 12px;
+    table-layout: fixed;
+
+    th {
+        font-weight: normal;
+        color: $content-color;
+        background-color: $table-header-color;
+        border: solid 1px $table-header-color;
+        font-size: 13px;
+    }
+
+    th.currentSort {
+        font-weight: bold;
+
+        i {
+            color: $videa-orange;
+        }
+    }
+
+    th.unsorted {
+        i {
+            color: $table-header-unsorted-color;
+        }
+    }
+
+    tr.sports-specials-header {
+
+        th:nth-child(5) i {
+            margin-top: -9px;
+        }
+
+        th:nth-child(6) i {
+            margin-top: -9px;
+        }
+
+        th:nth-child(8) i {
+            margin-top: -9px;
+        }
+    }
+
+    td {
+        border: solid 1px $table-border-color;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        -ms-text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    tbody tr:hover {
+        background-color: $table-hover-color;
+        cursor: pointer;
+
+        &.selectHeaderColor {
+            background-color: $table-nested-header-color;
+        }
+    }
+
+    th, td {
+        height: 41px;
+        padding: 0 6px;
+    }
+
+    .selectHeaderColor {
+        background-color: $table-nested-header-color;
+    }
+
+    .expandCollapseIcon {
+        color: $action-color;
+        margin-right: .4em;
+        font-size: 16px;
+        top: 0.2em;
+    }
+
+    .down {
+        margin-left: .5em;
+        font-size: 18px;
+        float: right;
+    }
+
+    .up {
+        margin-left: .5em;
+        font-size: 18px;
+        float: right;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    .support-table-expansion {
+        padding: .5em 1.5em 0;
+        margin-top: -5px;
+        background-color: $table-hover-color;
+
+        table {
+            border-spacing: 0px;
+            border-collapse: separate;
+            width: 100%;
+            table-layout: fixed;
+            padding-left: 30px;
+
+            .support-table-detail td, th {
+                background-color: #fff;
+            }
+
+            td, th {
+                background-color: $table-hover-color;
+                border-top: none;
+                border-left: none;
+                border-right: none;
+                border-bottom: solid 1px $table-border-color;
+                height: 30px;
+                padding: 0;
+            }
+
+            .lastRow td {
+                border-bottom: none;
+            }
+
+            th {
+                font-weight: bold;
+                color: #51545d;
+                border-bottom: solid 2px #98999B;
+            }
+
+            tbody tr:hover {
+                background-color: #ECF5F8;
+                cursor: pointer;
+            }
+
+            a {
+                float: right;
+                color: #682566;
+                padding: 1.5em 0;
+                text-decoration: none;
+            }
+
+            i {
+                font-size: 14pt;
+                vertical-align: text-bottom;
+                margin-left: .5em;
+            }
+        }
+    }
+}
+
+.support-date-range {
+    float: left;
+    height: 38px;
+
+    .on-valid {
+        border: solid 1px $action-color;
+    }
+
+    .on-invalid {
+        border: solid 1px $videa-error;
+    }
+
+    .filter-calendar {
+        float: left;
+        background-color: #fff;
+        width: 133px;
+        height: 34px;
+        margin: 0 0 0 10px;
+        position: relative;
+    }
+
+    .request-calendar {
+        float: left;
+        background-color: #fff;
+        height: 34px;
+        clear: both;
+        position: relative;
+    }
+
+    .filter-calendar-textbox, .filter-calendar-textbox:focus {
+        width: 103px;
+        height: 30px;
+        float: left;
+        border: none;
+        margin-left: 0px;
+    }
+
+    .filter-calendar-button {
+        float: right;
+        border: none;
+        overflow: hidden;
+        height: 24px;
+        padding: 5px 6px;
+    }
+
+    .filter-calendar-button-submit {
+        float: left;
+        background-color: #682566;
+        width: 27px;
+        height: 28px;
+        margin: 5px 0 0 9px;
+        cursor: pointer;
+
+        p {
+            margin-top: 4px;
+            text-align: center;
+            color: #fff;
+            font-weight: 300;
+        }
+    }
+
+    .calendar-container .dropdown-menu {
+        top: 2.7em !important;
+        left: 10.5em !important;
+        padding: 6px;
+        background-color: $action-color;
+    }
+
+    i {
+        color: $content-color;
+        font-size: 16px;
+    }
+}
+
+div.videa-dropdown {
+    border: solid 1px $action-color;
+    float: left;
+    height: 34px;
+    line-height: 20px;
+    margin-left: 10px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 6px;
+    background: white;
+
+    div.dropdown {
+        background: $content-color;
+        float: left;
+
+        .dropdown-toggle {
+            text-decoration: none;
+        }
+
+        ul {
+            cursor: pointer;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        a {
+            text-decoration: none;
+
+            div {
+                cursor: pointer;
+
+                span {
+                    font-size: 13px;
+                    color: $videa-font-color;
+                    padding: 0 0 0 .8em;
+                    margin-top: .1em;
+                    overflow-x: hidden;
+                }
+
+                i {
+                    font-size: 18px;
+                    float: right;
+                    margin: 1px 10px 0;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border: 2px solid #682566;
+        top: 190%;
+        min-width: initial;
+        margin-left: -10px;
+
+        i.icon-triangle-up {
+            color: #682566;
+            position: absolute;
+            top: -14px;
+            font-size: 19px;
+        }
+    }
+
+    .dropdown-menu > li > a:hover {
+        color: #fff;
+        background-color: #682566;
+    }
+
+    .dropdown-menu-timeframe {
+        top: 140%;
+    }
+}
+
+.support-filter-label {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+div.support-dropdown-sm-5 {
+    $width: 416px;
+    $height: 50px;
+    border: solid 1px $action-color;
+    float: left;
+    border-radius: 0px;
+    width: $width;
+    height: $height;
+    font-size: 150%;
+
+    .checkbox {
+        display: block;
+
+        li:hover {
+            color: #fff;
+            background-color: #682566;
+        }
+    }
+
+    div.dropdown {
+        background: $content-color;
+        float: left;
+        width: $width - 20;
+        line-height: 150%;
+
+
+        .dropdown-toggle {
+            text-decoration: none;
+        }
+
+        ul {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+
+            div {
+                width: $width - 22;
+                cursor: pointer;
+                height: 25px;
+
+                span {
+                    float: left;
+                    font-size: 16px;
+                    color: $videa-font-color;
+                    padding: 0 0 0 .8em;
+                    margin-top: .1em;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: inline;
+                }
+
+                i {
+                    font-size: 20px;
+                    float: right;
+                    margin: 10px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 10px;
+        border: 2px solid #682566;
+        top: 150%;
+        min-width: $width + 24;
+        margin-left: -12px;
+
+        > li {
+            margin-bottom: 5px;
+        }
+
+        i.icon-triangle-up {
+            color: #682566;
+            position: absolute;
+            top: -14px;
+            font-size: 19px;
+            left: $width - 35;
+        }
+    }
+
+    .dropdown-menu > li > a:hover {
+        color: #fff;
+        background-color: #682566;
+    }
+
+    .dropdown-menu-timeframe {
+        top: 140%;
+    }
+}
+
+div.support-dropdown-sm-2 {
+    border: solid 1px $action-color;
+    float: left;
+    border-radius: 0px;
+    width: $buyer-sm-2;
+
+    div.dropdown {
+        background: $content-color;
+        float: left;
+        width: $buyer-sm-2 - 11;
+        border-radius: 0px;
+
+        .dropdown-toggle {
+            text-decoration: none;
+
+            .dropdown-toggle-station-month {
+                width: $buyer-sm-2;
+                height: 27px;
+
+                span {
+                    border-left: none;
+                    padding-right: 0;
+                    padding-left: 8px;
+                    margin-top: 0;
+                }
+
+                i.icon-angle-down {
+                    margin: 5px;
+                }
+            }
+        }
+
+        ul {
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none;
+
+            div {
+                width: $buyer-sm-2 - 10;
+                cursor: pointer;
+                height: 25px;
+
+                span {
+                    float: left;
+                    font-size: 13px;
+                    color: $videa-font-color;
+                    padding: 0 0 0 .8em;
+                    margin-top: .1em;
+                    width: $buyer-sm-2 - 32;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    display: inline;
+                }
+
+                i {
+                    font-size: 18px;
+                    float: right;
+                    margin: 1px 10px 0 0;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0;
+        border: 2px solid #682566;
+        top: 190%;
+        min-width: $buyer-sm-2;
+        margin-left: -10px;
+
+        i.icon-triangle-up {
+            color: #682566;
+            position: absolute;
+            top: -14px;
+            font-size: 19px;
+            left: $buyer-sm-2 - 25;
+        }
+    }
+
+    .dropdown-menu > li > a:hover {
+        color: #fff;
+        background-color: #682566;
+    }
+
+    .dropdown-menu-timeframe {
+        top: 140%;
+    }
+}
+
+.vui-checkbox {
+    margin: 0 8px;
+
+    span {
+        span {
+            border: solid 1px #692565;
+        }
+
+        span.vui-checkbox-checked {
+            color: #692565;
+
+            i {
+                color: #692565;
+            }
+        }
+
+        span.vui-checkbox-unchecked {
+            i {
+                color: rgba(82, 84, 93, 0.00);
+            }
+        }
+    }
+}

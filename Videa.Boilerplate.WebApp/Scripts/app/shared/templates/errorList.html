@@ -1,0 +1,6 @@
+﻿<div class="buyer-field-validation" data-ng-show="modelstate != null && modelstate[field] != null && modelstate[field].errors.length > 0">
+    <div data-ng-repeat="error in modelstate[field].errors" style="position:relative;top:-10px;">
+        <div style="float:left;padding-left:10px;padding-top:5px;"><i class="glyphicon glyphicon-warning-sign"></i></div>
+        <div style="padding-left:30px;padding-top:5px;">{{error.errorMessage}}</div>
+    </div>
+</div>

@@ -1,0 +1,174 @@
+﻿@using System.Configuration
+@using Videa.Web.Framework.Helpers;
+@using Microsoft.AspNet.Identity;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="XSRFToken" content="@Html.GetAntiforgeryToken()">
+    <meta name="generator" content="Videa-@Html.GetBuildNumber()">
+    <meta name="description" content="" />
+    <title>Videa.tv</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    @Styles.Render("~/Content/styles/site.min.css")
+    @Scripts.Render("~/Scripts/libraries.min.js")
+    @Scripts.Render("~/Scripts/angular.all.min.js")
+
+    @RenderSection("headerScripts", required: false)
+
+    @Scripts.Render("~/Scripts/app/shared/app.min.js")
+    @Scripts.Render("~/Scripts/app/account/app.min.js")
+
+    @RenderSection("styles", required: false)
+    <style type="text/css">
+                /* Sticky footer styles
+        -------------------------------------------------- */
+
+                html,
+                body {
+                    height: 100%;
+                    /* The html and body elements cannot have any padding or margin. */
+                }
+
+                /* Wrapper for page content to push down footer */
+                #wrap {
+                    min-height: 100%;
+                    height: auto !important;
+                    height: 100%;
+                    /* Negative indent footer by its height */
+                    margin: 0 auto -160px;
+                    /* Pad bottom by footer height */
+                    padding: 0 0 160px;
+                }
+
+                /* Set the fixed height of the footer here */
+                #footer {
+                    height: 60px;
+                    background-color: #f5f5f5;
+                }
+
+
+                /* Custom page CSS
+        -------------------------------------------------- */
+                /* Not required for template or sticky footer method. */
+
+                #wrap > .container {
+                    padding: 60px 15px 0;
+                }
+
+                .container .credit {
+                    margin: 20px 0;
+                }
+
+                #footer > .container {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                code {
+                    font-size: 80%;
+                }
+    </style>
+</head>
+
+<body ng-app="videaApp">
+
+    <div  id="wrap">
+     
+
+
+
+        <div class="clearfix top-nav navbar navbar-default navbar-fixed-top">
+            <div class="header-container">
+
+                <div class="header">
+                    <div class="base-content">
+                        <a href="/">
+                            <img class="header-logo" src="/Content/Images/videa.png" />
+                        </a>
+                        <form name="logoutform" class="form-horizontal pull-right">
+                            <span style="font-size:18px;vertical-align:middle;">placeholder.user@videa.tv <i class="icon-angle-down" style="color:#F58220;margin-left:5px;"></i></span>
+                            <span style="padding:0 10px;">|</span>
+                            <span class="form-control-static mrxs">WELCOME </span>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle form-control-static mrxs">user@email.com!</a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/Buyers/Campaign/Create" target="_self">Buyers</a>
+                                        <a href="/Support/ProposalCreation" target="_self">Support</a>
+                                        <a href="/Reps/Order" target="_self">Reps</a>
+                                        <a href="/OrderManagement/OrderListing" target="_self">Order Management</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="submit" class="btn btn-signout form-control-static" value="SIGN OUT" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-menu">
+
+                <ul class="horizontal-list ">
+                    <li class="active"><a href="#">Rate Card</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li class="dropdown">
+                            <a class=" dropdown-toggle" href="#" aria-haspopup="true" aria-expanded="false"> Performance<i class="icon-angle-down"></i> </a>
+                            <ul class="navigation-dropdown dropdown-menu" role="menu">
+                                <li><a href="#">Account Performance</a></li>
+                                <li><a href="#">Station Performance</a></li>
+                                <li class="divider">f</li>
+                                <li><a href="#">Station Performance</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="#">Pre-Empt</a></li>
+                </ul>
+            </div>
+        </div>
+
+     
+
+    </div>
+    <div class="flex-container" ng-cloak>
+        @RenderBody()
+    </div>
+
+
+    <div class="footer">
+        <div class="bottom-links-wrap text-center">
+            <ul class="bottom-links">
+                <li>
+                    <a href="~/BspPrivacyPolicy">Privacy Policy</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="~/BspTermsAndConditions">Terms & Conditions</a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center">
+            3390 Peachtree Road NE, Suite 700 Atlanta, GA 30326
+            <div class="text-center">
+                 vvv
+            </div>
+        </div>
+        <div class="text-center">
+            Copyright &copy;
+            <script type="text/javascript">
+                var dt = new Date();
+                document.write(dt.getFullYear());
+            </script>
+            Videa. All rights reserved.
+        </div>
+    </div>
+        
+    @Scripts.Render("~/Scripts/bootstrap.min.js")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
+

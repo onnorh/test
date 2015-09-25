@@ -1,0 +1,7 @@
+﻿<div class="col-md-4">
+    <input name="ssSearch" placeholder="Search" search-list="searchList" ng-keydown="checkKeyDown($event)" ng-keyup="checkKeyUp($event)" ng-model="ssSearch" ng-change="search()" type="text" style="font-size:16px;width: 5.5em;width:100%;height:3em;padding:.5em;margin: 0 .5em 0 0;" />
+
+    <ul class="autocomplete-list">
+        <li ng-repeat="suggestion in suggestions track by $index" ng-click="assignValue($index)">{{suggestion}}</li>
+    </ul>
+</div>

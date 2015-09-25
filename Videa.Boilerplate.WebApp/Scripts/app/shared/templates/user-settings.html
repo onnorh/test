@@ -1,0 +1,102 @@
+﻿<div class="preferences">
+    <div ng-form="userSettingsForm">
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Reset Password</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>Please enter your old password and confirm your new password.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="col-lg-4" style="border-right: solid 2px #E8EBED;">
+
+                    <div class="form-group" style="width: 232px;">
+                        <span>Old Password:</span>
+                        <input class="preference-box form-control" data-ng-model="profile.currentPassword" name="currentPassword" type="password" />
+                        <data-errorlist modelstate="loadedModel.modelState" field="currentPassword"></data-errorlist>
+                    </div>
+
+                    <div class="form-group" style="width: 232px;">
+                        <span>New Password:</span>
+                        <input class="preference-box form-control" data-ng-model="profile.newPassword" name="newPassword" type="password" />
+                        <data-errorlist modelstate="loadedModel.modelState" field="newPassword"></data-errorlist>
+                    </div>
+                    <div class="form-group" style="width: 232px;">
+                        <span>Confirm New Password:</span>
+                        <input class="preference-box form-control" data-ng-model="profile.confirmPassword" name="confirmPassword" data-vui-match="profile.newPassword" type="password" />
+                        <data-errorlist modelstate="loadedModel.modelState" field="confirmPassword"></data-errorlist>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="margin-left:40px">
+                    <div class="form-group">
+                        <h4>Password Requirements</h4>
+                        <p>At least 6 characters</p>
+                        <p>Contains uppercase and lowercase letters</p>
+                        <p>Contains a number</p>
+                        <p>Contains at least 1 special character</p>
+                        <p>Does NOT include your email or username</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div style="border-bottom: solid 2px #E8EBED; margin-bottom: 40px;"></div>
+            
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Contact Information</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>Update Phone Number</h4>
+                    <p>Please enter your phone number and confirm your new phone number.</p>
+                </div>
+                <div class="col-lg-6" style="margin-left:40px;">
+                    <p style="margin-top:38px;">Please contact the administrator at 844-213-8543 or admin@videa.tv if you need to have your email updated.</p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-lg-4">
+                    <div class="form-group" style="width: 232px;">
+                        <span>Phone Number:</span>
+                        <input class="preference-box form-control" data-ng-model="profile.currentPhoneNumber" ui-mask="{{'999 - 999 - 9999'}}" type="text" disabled />
+                    </div>
+                    <div class="form-group" style="width: 232px;">
+                        <span>New Phone Number (xxx-xxx-xxxx):</span>
+                        <input class="preference-box form-control" value="{{profile.newPhoneNumber}}" data-ng-model="profile.newPhoneNumber" name="newPhoneNumber" ui-mask="{{'999 - 999 - 9999'}}" type="text" />
+                        <data-errorlist modelstate="loadedModel.modelState" field="newPhoneNumber"></data-errorlist>
+                    </div>
+                    <div class="form-group" style="width: 232px;">
+                        <span>Confirm New Phone Number:</span>
+                        <input class="preference-box form-control" value="{{profile.confirmPhoneNumber}}" data-ng-model="profile.confirmPhoneNumber" name="confirmPhoneNumber" vui-match="profile.newPhoneNumber" ui-mask="{{'999 - 999 - 9999'}}" type="text" />
+                        <data-errorlist modelstate="loadedModel.modelState" field="confirmPhoneNumber"></data-errorlist>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="button" class="btn btn-primary pref-button" value="SUBMIT" ng-click="saveUserProfile()" />
+                <input type="button" class="btn btn-primary pref-button pref-cancel" value="CANCEL" ng-click="toggleDirtyModal()" />
+            </div>
+        </div>
+
+        <data-modal-dialog show='dirtyModalShown' width='400px' height='170px'>
+            <div class="modal-title"> <h2> Warning </h2> </div>
+            <div class="modal-table">
+                <p>You have unsaved changes. Close and lose changes?</p>
+            </div>
+            <div>
+                <input type="button" ng-click="clearForm();toggleDirtyModal();" class="btn btn-primary" value="OK" />
+                <input type="button" ng-click="toggleDirtyModal()" class="btn btn-primary" value="Cancel" />
+            </div>
+        </data-modal-dialog>
+    </div>
+</div>
